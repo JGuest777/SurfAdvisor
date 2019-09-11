@@ -1,5 +1,11 @@
+// IMPORTS:
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sigmar+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Chilanka&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed&display=swap');
 
+// GLOBAL:
 h1,
 h2,
 h3,
@@ -9,22 +15,42 @@ h6 {
 	margin: 0;
 	padding: 0;
 }
+
 body {
 	background: image_url('beanstalk.png');
 	font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif",
 		"Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 }
 
+// FONTS:
+h1 {
+	font-family: 'Sigmar One', cursive;
+	text-shadow: 0 0 3px #ff0000;
+}
+
+i {
+	font-family: 'Chilanka', cursive;
+}
+
+p {
+	font-family: 'Saira Extra Condensed', sans-serif;
+	font-size: 18px;
+}
+
+// NAVBAR:
 .navbar {
 	background: image_url('memphis-mini-dark.png');
 	box-shadow: 0px 1px 3px #2a2a2a;
 	border-bottom: solid 1px #ff0000;
 }
 
-.navbar-brand {
+.navbar-inverse .navbar-brand {
 	text-shadow: 0 0 5px #ff0000;
+	font-family: 'Righteous', cursive;
+	font-size: 26px;
 }
 
+// CONTENT:
 .booyah-box {
 	-moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
 	-webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
