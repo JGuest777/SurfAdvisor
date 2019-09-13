@@ -23,6 +23,10 @@ body {
 		"Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 }
 
+a {
+	color: black;
+}
+// ERRORS:
 .invalid-feedback {
 	color: #721c24;
 	background-color: #f8d7da;
@@ -58,6 +62,8 @@ body {
 h1 {
 	font-family: 'Sigmar One', cursive;
 	text-shadow: 0 0 3px #ff0000;
+	text-decoration: none;
+	color: black;
 }
 
 i {
