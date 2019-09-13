@@ -23,12 +23,24 @@ body {
 		"Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 }
 
+.invalid-feedback {
+	color: #721c24;
+	background-color: #f8d7da;
+	border-color: #f5c6cb;
+	position: relative;
+	padding: .75rem 1.25rem;
+	margin-bottom: 1rem;
+	border: 1px solid transparent;
+	border-radius: .25rem;
+}
+
 // PAGINATION:
 .page-item.active .page-link {
 	z-index: 2;
 	color: #fff;
 	background-color: #ff0000;
 	border-color: #ff0000;
+	padding: 2px 8px;
 }
 
 .page-link {
