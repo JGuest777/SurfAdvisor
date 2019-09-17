@@ -17,6 +17,10 @@ h6 {
 	padding: 0;
 }
 
+.clear {
+	clear: both;
+}
+
 body {
 	background: image_url('beanstalk.png');
 	font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif",
@@ -26,6 +30,7 @@ body {
 a {
 	color: black;
 }
+
 // ERRORS:
 .invalid-feedback {
 	color: #721c24;
