@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CommetTest < ActiveSupport::TestCase
+class PhotosControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
