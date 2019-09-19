@@ -1,9 +1,10 @@
+<%# PLACE INFO BOX %>
 <div class="booyah-box col-10 offset-1">
   <h1><%= @place.name %></h1>
   <i><%= @place.address %></i>
   <br /><br />
   <p><%= @place.description %></p>
-
+<%# MAP %>
     <% if @place.latitude.present? && @place.longitude.present? %>
       <script>
         function initMap() {
@@ -29,7 +30,7 @@
     <% end %>
 
     <br />
-
+<%# EDIT & DELETE FUNCTIONALITY FOR AUTHORIZED_USER %>
   <div class='float-right'>
     <% if current_user && current_user == @place.user %>
       <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-danger' %>
@@ -42,7 +43,7 @@
 
 <div class="clear"></div>
 
-<!-- Modal -->
+<!-- COMMENT - Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -66,6 +67,7 @@
   </div>
 </div>
 
+<%# COMMENT DISPLAY CONTENT  %>
 <div class="col-10 offset-1">
   <h1 class="float-left">Comments</h1>
   <!-- Button trigger modal -->
@@ -90,7 +92,20 @@
   <% end %>
 </div>
 
+
+<%# PHOTOS: %>
 <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
   <%= f.input :caption %>
   <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
 <% end %>
+
+<div class="row">
+  <% @place.photos.each do |photo| %>
+    <div class="col-12 col-sm-6">
+      <blockquote>
+        <%= photo.caption %>
+        <small><%= photo.user.email %></small>
+      </blockquote>
+    </div>
+  <% end %>
+</div>
