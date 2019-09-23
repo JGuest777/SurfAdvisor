@@ -2,13 +2,11 @@
   <div class="booyah-box col-10 offset-1">
     <h1><%= link_to place.name, place_path(place) %></h1><br />
     <i><%= place.address %></i><br /><br />
-    <p><%= place.description %></p><br />
-
+    <p><%= place.description %></p>
     <% if place.user.present? %>
       <small><%= place.user.email %></small>
     <% end %>
-  </div>
-
+<%# LAST COMMENT/PHOTO %>
   <% if place.comments.present? %>
     <div class="col-12">
       <blockquote>
@@ -20,7 +18,19 @@
       </blockquote>
     </div>
   <% end %>
+  <% if place.photos.present? %>
+    <div class="col-12">
+       <% if place.photos.last.present? %>
+        <%= image_tag place.photos.last.picture.to_s, class: 'img-fluid' %>
+       <% end %>
+       <br />
+       <%= place.photos.last.caption %>
+        <small><%= place.photos.last.user.email %></small>
+    </div>
+  <% end %>
+  </div>
 <% end %>
+
 
 
 <%= will_paginate @places, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
