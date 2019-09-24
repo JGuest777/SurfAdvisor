@@ -9,19 +9,19 @@
     <div class="carousel-item active">
       <%= image_tag 'slider1.jpg', class:'d-block img-fluid' %>
       <div class="carousel-caption d-none d-md-block">
-        <h3>Find the best surf places!</h3>
+        <h3>Find the best surf!</h3>
       </div>
     </div>
     <div class="carousel-item">
       <%= image_tag 'slider2.jpg', class:'d-block img-fluid' %>
       <div class="carousel-caption d-none d-md-block">
-        <h3>Find Beach breaks!</h3>
+        <h3>Share your favorite break!</h3>
       </div>
     </div>
     <div class="carousel-item">
       <%= image_tag 'slider3.jpg', class:'d-block img-fluid' %>
       <div class="carousel-caption d-none d-md-block">
-        <h3>-or- Reef breaks!</h3>
+        <h3>Built for surfers by surfers!</h3>
       </div>
     </div>
   </div>
@@ -59,7 +59,7 @@
   <% if place.photos.present? %>
     <div class="col-12">
        <% if place.photos.last.present? %>
-        <%= image_tag place.photos.last.picture.to_s, class: 'img-fluid' %>
+        <%= image_tag place.photos.last.picture.to_s, class: 'index_user_photo img-fluid' %>
        <% end %>
        <br />
        <%= place.photos.last.caption %>
