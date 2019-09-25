@@ -71,7 +71,7 @@ end
 
 gem 'will_paginate-bootstrap4'
 gem 'simple_form'
-gem 'font-awesome-rails'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem 'devise'
 gem 'geocoder'
 gem 'figaro'

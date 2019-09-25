@@ -57,12 +57,12 @@
     </div>
   <% end %>
   <% if place.photos.present? %>
-    <div class="col-12">
+    <div class="col-8" align="center">
        <% if place.photos.last.present? %>
         <%= image_tag place.photos.last.picture.to_s, class: 'index_user_photo img-fluid' %>
        <% end %>
        <br />
-       <%= place.photos.last.caption %>
+       <%= place.photos.last.caption %> <br />
         <small><%= place.photos.last.user.email %></small>
     </div>
   <% end %>
