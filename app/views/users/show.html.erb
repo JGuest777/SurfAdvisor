@@ -1,18 +1,23 @@
 <div class="booyah-box col-10 offset-1">
   <div class="row">
     <div class="col-4">
-      <%= image_tag 'user_icon.png' %>
+      <%= image_tag 'user_icon.png', class: 'img-fluid' %>
     </div>
 
     <div class="col-8">
-      <h2><%= @user.email %></h2>
-      <h3>Member Since: <%= @user.created_at.strftime("%B %d, %Y") %> </h3>
-      <h4><%= @user.comments.count %> total comments</h4>
-      <h4><%= @user.comments.where(rating: '5_stars').count %> total 5 star reviews</h4>
+    <div class="text-center">
+    
+      <h2 class="profile profile_email"><%= @user.email %></h2>
+      <br />
+      <h3 class="profile">Member Since: <%= @user.created_at.strftime("%B %d, %Y") %> </h3>
+      <br />
+      <h4 class="profile"><%= @user.comments.count %> total comments</h4>
+      <br />
+      <h4 class="profile"><%= @user.comments.where(rating: '5_stars').count %> total 5 star reviews</h4>
     </div>
   </div>
+    </div>
   <div class="clear"></div>
-</div>
 
 <br /><br />
 
@@ -45,16 +50,6 @@
     <h1><%= link_to place.name, place_path(place) %></h1>
     <i><%= place.address %></i><br />
     <p><%= place.description %></p><br />
-
-    <% if place.comments.present? %>
-      <div class="col-12">
-        <blockquote>
-          <% if place.comments.last.humanized_rating.present? %>
-            <b><%= place.comments.last.humanized_rating %></b> -
-          <% end %>
-          <%= place.comments.last.message %>
-        </blockquote>
-      </div>
-    <% end %>
   </div>
 <% end %>
+</div>
