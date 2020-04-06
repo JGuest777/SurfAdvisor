@@ -4,21 +4,17 @@ A Yelp clone that integrates with the Google Maps API and includes features like
 
 <img src="images/index.PNG">
 
-## Uploading
+## User Dashboard
 
-<img src="images/upload.PNG" width="434"> <img src="images/lessons.PNG" width="434">
+<img src="images/dash.PNG">
 
 ## Comments/Ratings
 
 <img src="images/show.PNG" width="434"> <img src="images/show2.PNG" width="434">
 
-## Authentication
+## User Authentication/Uploading
 
-<img src="images/auth.PNG">
-
-## User Dashboard
-
-<img src="images/dash.PNG">
+<img src="images/auth.PNG" width="434"> <img src="images/upload.PNG" width="434">
 
 ## Deployment
 
