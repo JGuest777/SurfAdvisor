@@ -12,9 +12,9 @@ A Yelp clone that integrates with the Google Maps API and includes features like
 
 <img src="images/show.PNG" width="434"> <img src="images/show2.PNG" width="434">
 
-## User Authentication/Uploading
+## User Authentication/Uploading/Email
 
-<img src="images/auth.PNG" width="434"> <img src="images/upload.PNG" width="434">
+<img src="images/auth.PNG" width="288"> <img src="images/upload.PNG" width="288"> <img src="images/email.PNG" width="288">
 
 ## Deployment
 
